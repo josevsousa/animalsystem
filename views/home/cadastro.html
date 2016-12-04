@@ -1,24 +1,32 @@
 {{extend 'layout_login.html'}}
 
 {{block head}}
-<!-- <link rel="stylesheet" type="text/css" href="{{=URL('static','css/conta/cadastro.css')}}"> -->
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/cadastro/cadastro.css')}}">
 {{end}}
 
-{{block main}}
-	<div class="row logo_reg">
+	<div class="row">
 		<div  class="col-md-6 ">
-			<div class="logar">
-			{{=logo}}
-				  <h2>LOGIN</h2>
-				{{=login}}
-			</div>	
-		</div>
-		<div class="col-md-6 ">
-			
-			<div class="registrar">
-				  <h2>CADASTRO </h2>
-				  {{=cadastro}}
+			<div class="card logar">
+				<div class="header">
+					{{=logomin}}
+					<h4> LOGIN</h4>
+				</div>
+				<div class="content">
+						{{=login}}
+				</div>
 			</div>
 		</div>
+		<div class="col-md-6 ">
+
+			<div class=" card registrar">
+				<div class="header">
+					{{=logomin}}
+					<h4>CADASTRO</h4>
+				</div>
+				<div class="content">
+				  {{=cadastro}}
+				</div>
+			</div>
+		</div>
+		<div class="clean"></div>
 	</div>
-{{end}}

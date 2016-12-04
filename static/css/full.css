@@ -1,0 +1,23 @@
+
+/*logo*/
+#logoFont2{
+    margin: 0px auto !important;
+    font-family: 'Comfortaa', cursive;
+    color: #88DEF9;
+    font-size: x-large;
+    padding: 6px;
+}#logoFont2>span{
+    color: #00C3FF;
+}
+
+
+.logoBar {
+    width: 199px;
+    margin: 0 auto;
+}
+
+i.material-icons {
+    color: #88def9;
+    float: left;
+    font-size: 31px;
+}

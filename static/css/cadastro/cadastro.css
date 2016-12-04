@@ -1,0 +1,12 @@
+.wrapper{
+  background-color: #f4f3ef;
+  height: 100%;
+}
+.error{color: red;}
+.header {
+    color: #cecece;
+}
+input {
+    background-color: white !important;
+    border-bottom: 1px solid #cecece !important;
+}

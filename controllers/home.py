@@ -58,8 +58,7 @@ def user():
     return dict(form=auth())
 
 def cadastro():
-    logo = IMG(_src=URL('static','images/logo/logo_m.png'),_width='150px')
-    return dict(cadastro=auth.register(),logo=logo,login=auth.login())
+    return dict(cadastro=auth.register(),login=auth.login())
 
 def reset_passwold():
     logo = IMG(_src=URL('static','images/logo/logo_m.png'),_width='150px')
