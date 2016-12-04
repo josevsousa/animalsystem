@@ -58,7 +58,18 @@ def user():
     return dict(form=auth())
 
 def cadastro():
-    return dict(cadastro=auth.register(),login=auth.login())
+
+    login = auth.login()
+    # alterar atributos dos elementos do form login
+    login.elements('input')[0].attributes['_type'] = 'email'
+    login.elements('input')[3].attributes['_class'] = 'btn btn-info btn-fill btn-wd'
+
+    # alterando atributos dos elementos do form cadastro
+    cadastro = auth.register()
+    cadastro.elements('input')[2].attributes['_type'] = 'email'
+    cadastro.elements('input')[5].attributes['_class'] = 'btn btn-info btn-fill btn-wd'
+
+    return dict(cadastro=cadastro,login=login)
 
 def reset_passwold():
     logo = IMG(_src=URL('static','images/logo/logo_m.png'),_width='150px')

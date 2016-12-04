@@ -1,4 +1,7 @@
 
+.center{text-align: center;}
+
+
 /*logo*/
 #logoFont2{
     margin: 0px auto !important;
@@ -9,13 +12,10 @@
 }#logoFont2>span{
     color: #00C3FF;
 }
-
-
 .logoBar {
     width: 199px;
     margin: 0 auto;
 }
-
 i.material-icons {
     color: #88def9;
     float: left;
