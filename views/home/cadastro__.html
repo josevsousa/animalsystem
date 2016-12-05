@@ -1,0 +1,35 @@
+{{extend 'layout_login.html'}}
+
+{{block head}}
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/cadastro/cadastro.css')}}">
+{{end}}
+
+<div class="full">
+	<div class="wrapper wrapper-full-page">
+		<div class="register-page">
+			<div class="content">
+				<div class="container">
+					<!-- displayA -->
+					<div id="displayIndex" >
+							<div role="main" class="ui-content">
+									<div id="logoBox">
+											<i class="material-icons">pets</i>
+											<h1 id='logoFont'>Animal<span>System</span></h1>
+											<span>+ Proteção a seu animalzinho</span>
+									</div>
+									<br>
+									<div class="social">
+											<h4>conecte-se</h4>
+											<a href="#" id="authGithubButton"><img src="{{=URL('static','images/social/gh.png')}}"/></a>
+											<a href="#" id="authFacebookButton"><img src="{{=URL('static','images/social/fa.png')}}"/></a>
+											<a href="#" id="authGoogleButton"><img src="{{=URL('static','images/social/go.png')}}"/></a>
+											<a href="#" id="authTwitterButton"><img src="{{=URL('static','images/social/tw.png')}}"/></a>
+									</div>
+							</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- fim do full -->

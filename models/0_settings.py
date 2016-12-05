@@ -10,7 +10,28 @@ file_settings = file.readlines()
 
 
 # logo min
-logomin = DIV(
-    I('pets',_class='material-icons'),
-    H1('Animal',SPAN('System'),_id='logoFont2'),
-_class='logoBar')
+def LOGINMIN():
+    logomin = DIV(
+        I('pets',_class='material-icons'),
+        # H1(file_settings[0].capitalize(),SPAN(file_settings[1].capitalize()),_id='logoFont2'),
+        H1('Animal',SPAN('System'),_id='logoFont2'),
+    _class='logoBar')
+    return logomin
+
+# marcaDagua
+def MARCADAGUA():
+    marcaDagua = DIV(
+        I('pets',_class="material-icons"),
+        # H1((file_settings[0:2]),_id='logoFont3'),
+        H1('AnimalSystem',_id='logoFont3'),
+        SPAN('+ Proteção a seu animalzinho'),
+    _id="logoBox")
+    return marcaDagua
+
+
+
+# <div id="logoBox">
+#     <i class="material-icons">pets</i>
+#     <h1 id='logoFont3'>Animal<span>System</span></h1>
+#     <span>+ Proteção a seu animalzinho</span>
+# </div>

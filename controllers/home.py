@@ -3,12 +3,11 @@
 # @auth.requires_membership('admin')
 def index():
     # ver se esta logado
+
     return dict(msg="Hello AnimalSystem")
 
-# registro
-def registro():
-    return dict(msg='hello registro')
-
+def tic():
+    return 'jose vicente'
 
 @cache.action()
 def download():
@@ -69,7 +68,9 @@ def cadastro():
     cadastro.elements('input')[2].attributes['_type'] = 'email'
     cadastro.elements('input')[5].attributes['_class'] = 'btn btn-info btn-fill btn-wd'
 
-    return dict(cadastro=cadastro,login=login)
+    logomin = LOGINMIN()
+
+    return dict(cadastro=cadastro,login=login, logomin=logomin)
 
 def reset_passwold():
     logo = IMG(_src=URL('static','images/logo/logo_m.png'),_width='150px')

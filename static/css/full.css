@@ -2,7 +2,29 @@
 .center{text-align: center;}
 
 
+
 /*logo*/
+#logoBox{
+    text-align: center;
+    color: #d6d4cd;
+}
+#logoBox i {
+    font-size: 8pc;
+}
+#logoFont1{
+    margin: 0px;
+    font-family: 'Comfortaa', cursive;
+    color: #61D9FF;
+    font-size: inherit;
+    font-weight: 800;
+}
+#logoFont3{
+  margin: 0px auto !important;
+  font-family: 'Comfortaa', cursive;
+  color: #d6d4cd;
+  font-size: xx-large;
+  padding: 6px;
+}
 #logoFont2{
     margin: 0px auto !important;
     font-family: 'Comfortaa', cursive;
@@ -16,7 +38,7 @@
     width: 199px;
     margin: 0 auto;
 }
-i.material-icons {
+.logoBar i.material-icons {
     color: #88def9;
     float: left;
     font-size: 31px;

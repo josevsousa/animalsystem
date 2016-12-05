@@ -10,6 +10,8 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Montserrat+Alternates|Niconne|Parisienne|Sue+Ellen+Francisco|Droid+Serif|PT+Sans" rel="stylesheet">
 
 
     <!-- Bootstrap core CSS     -->
@@ -24,6 +26,7 @@
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{=URL('static','assets/css/demo.css')}}" rel="stylesheet" />
+		<link href="{{=URL('static','css/full.css')}}" rel="stylesheet" />
 
 
     <!--  Fonts and icons     -->
@@ -50,9 +53,7 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
-                </a>
+                {{=LOGINMIN()}}
             </div>
 
 
@@ -62,30 +63,43 @@
   case 1: -->
 
 						<ul class="nav">
-                <li class="{{ = ['','active'][request.controller == 'home'] }}">
+                <!-- <li class="{{ = ['','active'][request.controller == 'home'] }}">
                     <a href="../home/index.html">
-                        <i class="ti-home"></i>
+												<i class="ti-home"></i>
                         <p>Home</p>
                     </a>
-                </li>
-                <li class="{{ = ['','active'][request.controller == 'registro'] }}" >
-                    <a href="../registro/index.html">
-                        <i class="ti-user"></i>
-                        <p>Registro</p>
-                    </a>
-                </li>
-                <li class="{{ = ['','active'][request.controller == 'teste'] }}" >
-                    <a href="../teste/index.html">
-                        <i class="ti-user"></i>
-                        <p>Teste</p>
-                    </a>
-                </li>
+                </li> -->
                 <li class="{{ = ['','active'][request.controller == 'pets'] }}" >
                     <a href="../pets/index.html">
                         <i class="ti-github"></i>
-                        <p>pets</p>
+                        <p>Pets</p>
                     </a>
                 </li>
+                <li class="{{ = ['','active'][request.controller == 'agenda'] }}" >
+                    <a href="../agenda/index.html">
+                        <i class="ti-calendar"></i>
+                        <p>Agenda</p>
+                    </a>
+                </li>
+                <li class="{{ = ['','active'][request.controller == 'favoritosPet'] }}" >
+                    <a href="../favoritosPet/index.html">
+                        <i class="ti-star"></i>
+                        <p>Favoritos Pet</p>
+                    </a>
+                </li>
+						</li>
+						<li class="{{ = ['','active'][request.controller == 'indicar'] }}" >
+								<a href="../indicar/index.html">
+										<i class="ti-gift"></i>
+										<p>Indique a um amigo</p>
+								</a>
+						</li>
+						<li class="{{ = ['','active'][request.controller == 'ong'] }}" >
+								<a href="../ong/index.html">
+										<i class="ti-heart"></i>
+										<p>Divulgue sua ong</p>
+								</a>
+						</li>
                 <!--<li>
                     <a href="table.html">
                         <i class="ti-view-list-alt"></i>
@@ -127,51 +141,64 @@
     </div>
 
     <div class="main-panel">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">{{=(request.controller).lower().capitalize()}}</a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
-								<p>Stats</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="ti-bell"></i>
-                                    <p class="notification">5</p>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar bar1"></span>
+							<span class="icon-bar bar2"></span>
+							<span class="icon-bar bar3"></span>
+						</button>
+						<a class="navbar-brand" href="#">
+							<i id="petIconBar" class="material-icons">pets</i> {{=(request.controller).lower().capitalize()}}</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">
+
+										<!-- 	<li>
+
+										{{if session.auth:}}
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="ti-user"></i>
+											<p>{{=session.auth.user.first_name}}</p>
+										</a>
+										{{pass}}
+
+								</li> -->
+							{{if session.auth:}}
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="ti-user"></i>
+									<p>{{=session.auth.user.first_name}}</p>
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Meu cadastro</a></li>
+									<li><a href="#">Meu endereço</a></li>
+								</ul>
+							</li>
+							{{pass}}
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="ti-bell"></i>
+									<p class="notification">5</p>
 									<p>Notifications</p>
 									<b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-						<li>
-                            <a href="#">
-								<i class="ti-settings"></i>
-								<p>Settings</p>
-                            </a>
-                        </li>
-                    </ul>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Notification 1</a></li>
+									<li><a href="#">Notification 2</a></li>
+									<li><a href="#">Notification 3</a></li>
+									<li><a href="#">Notification 4</a></li>
+									<li><a href="#">Another notification</a></li>
+								</ul>
+							</li>
+						</ul>
 
-                </div>
-            </div>
-        </nav>
+					</div>
+				</div>
+			</nav>
 
 
         <div class="content">
@@ -212,7 +239,19 @@
     </div>
 </div>
 
-
+<script type="text/javascript">
+		function init(){
+			// detectar tamanho da tela
+			var windowWidth = window.innerWidth; // < 1024 é mobile
+			//   var windowHeight = window.innerHeight; // > 870 não é mobile
+			if (windowWidth < 992) {
+			    petIconBar.hidden = false;
+			}else{
+				  petIconBar.hidden = true;
+			}
+		};
+		init();
+</script>
 </body>
 
     <!--   Core JS Files   -->

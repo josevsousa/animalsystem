@@ -454,7 +454,7 @@ hr {
 }
 .sidebar[data-active-color="danger"] .nav li.active > a,
 .off-canvas-sidebar[data-active-color="danger"] .nav li.active > a {
-  color: #EB5E28;
+  color: #18b7e8;
   opacity: 1;
 }
 
@@ -1446,7 +1446,7 @@ textarea.form-control {
 }
 
 .navbar-default {
-  background-color: #f4f3ef;
+  background-color: #ffffff; /* #f4f3ef; */
   border-bottom: 1px solid #DDDDDD;
 }
 .navbar-default .brand {
