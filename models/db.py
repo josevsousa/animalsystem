@@ -100,9 +100,10 @@ plugins = PluginManager()
 # -------------------------------------------------------------------------
 
 # depois do login
-auth.settings.login_next = URL("home","index")
+auth.settings.login_next = URL("pets","index")
 
 auth.define_tables(username=False, signature=False)
+
 
 # -------------------------------------------------------------------------
 # configure email

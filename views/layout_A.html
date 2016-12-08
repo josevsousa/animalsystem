@@ -10,8 +10,6 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="//fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Montserrat+Alternates|Niconne|Parisienne|Sue+Ellen+Francisco|Droid+Serif|PT+Sans" rel="stylesheet">
 
 
     <!-- Bootstrap core CSS     -->
@@ -27,7 +25,24 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{=URL('static','assets/css/demo.css')}}" rel="stylesheet" />
 		<link href="{{=URL('static','css/full.css')}}" rel="stylesheet" />
-
+		<!-- icon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="{{=URL('static','images/favicon/apple-icon-57x57.png')}}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{{=URL('static','images/favicon/apple-icon-60x60.png')}}">
+		<link rel="apple-touch-icon" sizes="72x72" href="{{=URL('static','images/favicon/apple-icon-72x72.png')}}">
+		<link rel="apple-touch-icon" sizes="76x76" href="{{=URL('static','images/favicon/apple-icon-76x76.png')}}">
+		<link rel="apple-touch-icon" sizes="114x114" href="{{=URL('static','images/favicon/apple-icon-114x114.png')}}">
+		<link rel="apple-touch-icon" sizes="120x120" href="{{=URL('static','images/favicon/apple-icon-120x120.png')}}">
+		<link rel="apple-touch-icon" sizes="144x144" href="{{=URL('static','images/favicon/apple-icon-144x144.png')}}">
+		<link rel="apple-touch-icon" sizes="152x152" href="{{=URL('static','images/favicon/apple-icon-152x152.png')}}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{=URL('static','images/favicon/apple-icon-180x180.png')}}">
+		<link rel="icon" type="image/png" sizes="192x192"  href="{{=URL('static','images/favicon/android-icon-192x192.png')}}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{=URL('static','images/favicon/favicon-32x32.png')}}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{{=URL('static','images/favicon/favicon-96x96.png')}}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{=URL('static','images/favicon/favicon-16x16.png')}}">
+		<link rel="manifest" href="{{=URL('static','images/favicon/manifest.json')}}">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="{{=URL('static','imagens/ms-icon-144x144.png')}}">
+		<meta name="theme-color" content="#ffffff">
 
     <!--  Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -37,6 +52,8 @@
 		{{include 'web2py_ajax.html'}} <!-- this includes jquery.js, calendar.js/.css and web2py.js -->
 
 	  {{block head}}{{end}}
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Montserrat+Alternates|Niconne|Parisienne|Sue+Ellen+Francisco|Droid+Serif|PT+Sans" rel="stylesheet">
 
 
 
@@ -155,7 +172,6 @@
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
-
 										<!-- 	<li>
 
 										{{if session.auth:}}
@@ -174,11 +190,14 @@
 									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="#">Meu cadastro</a></li>
-									<li><a href="#">Meu endereço</a></li>
+									<!-- <li><a href="#">Meu cadastro</a></li> -->
+									<li><a href="{{=URL('home', 'user', args='profile')}}"> Meu cadastro</a></li>
+									<li><a href="{{=URL('home', 'user', args='logout')}}"> Logof</a></li>
 								</ul>
 							</li>
 							{{pass}}
+
+
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="ti-bell"></i>
@@ -205,12 +224,12 @@
             <div class="container-fluid">
                   {{include}}
             </div>
-        </div>
 
+        </div>
 				<!-- footer -->
         <fo	oter class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
+                <!-- <nav class="pull-left">
                     <ul>
 
                         <li>
@@ -229,7 +248,7 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
                 <div class="copyright pull-right">
                     &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
                 </div>
@@ -240,6 +259,7 @@
 </div>
 
 <script type="text/javascript">
+
 		function init(){
 			// detectar tamanho da tela
 			var windowWidth = window.innerWidth; // < 1024 é mobile
@@ -249,6 +269,7 @@
 			}else{
 				  petIconBar.hidden = true;
 			}
+
 		};
 		init();
 </script>

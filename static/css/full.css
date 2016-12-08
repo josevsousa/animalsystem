@@ -1,7 +1,17 @@
 
 .center{text-align: center;}
-
-
+#addPet {
+  color: #ffffff;
+  padding: 7px 13px;
+  border-radius: 50%;
+  background-color: rgba(0, 204, 253, 0.4);
+  position: fixed;
+  right: 20px;
+  bottom: 58px;
+  font-size: 2pc;
+  cursor: pointer;
+  z-index: 1000;
+}
 
 /*logo*/
 #logoBox{

@@ -1,0 +1,21 @@
+div#cardPets {
+    text-align: right;
+    height: 110px;
+    background: url('../../images/blog-1.jpg');
+}
+
+div#cardPets .content h3{
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.textPet {
+    background: rgba(255, 255, 255, 0.85);
+    text-align: -webkit-right;
+    padding: 4px 9px;
+    color: #565656;
+    font-size: initial;
+    position: absolute;
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+    bottom: 0 !important;
+}

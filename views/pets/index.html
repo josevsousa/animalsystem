@@ -1,3 +1,26 @@
 {{extend 'layout_A.html'}}
 
-{{=marcaDagua}}
+{{block head}}
+<!-- <link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/themes.css')}}"> -->
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/pets.css')}}">
+{{end}}
+
+
+{{#=marcaDagua}}
+
+<div class="row">
+  <div class="col-md-12">
+    {{if PETS:}}
+      {{for pet in PETS:}}
+        {{=pet}}
+      {{pass}}
+    {{else:}}
+      {{=marcaDagua}}
+    {{pass}}
+  </div>
+</div>
+
+
+
+<span id="addPet" class="ti-plus"></span>
+<!-- <button id="addPet" type="button" name="button"><i class="material-icons">add</i></button> -->
