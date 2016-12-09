@@ -1,0 +1,251 @@
+.wrapper{
+  background-color: #f4f3ef;
+  height: 100%;
+}
+.error{color: red;}
+.header {
+    color: #cecece;
+}
+input[type=text], input[type=password], input[type=email] {
+    background-color: white !important;
+    border-bottom: 1px solid #cecece !important;
+}
+
+.checkbox input{display: block !important;}
+
+
+/*flex box*/
+/*body{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}*/
+/*
+font-family: 'Bad Script', cursive;
+font-family: 'Niconne', cursive;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Parisienne', cursive;
+font-family: 'Sue Ellen Francisco', cursive;
+font-family: 'Comfortaa', cursive;  OK
+*/
+
+div#titleView {
+    height: 23px;
+    padding: 10px;
+    background: #EFEFEF;
+    border: none;
+}
+.form label {
+    font-size: 12px;
+}
+.gradient_1{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#59d8ff+0,c6f1ff+6,ffffff+15 */
+    background: #59d8ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #59d8ff 0%, #c6f1ff 6%, #ffffff 15%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #59d8ff 0%,#c6f1ff 6%,#ffffff 15%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #59d8ff 0%,#c6f1ff 6%,#ffffff 15%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59d8ff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.gradient_2{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ccf3ff+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ffffff 0%, #ccf3ff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #ffffff 0%,#ccf3ff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #ffffff 0%,#ccf3ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ccf3ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+.font_1{
+    font-family: 'Bad Script', cursive;
+}
+.font_2{
+    font-family: 'Niconne', cursive;
+}
+.font_3{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.font_4{
+    font-family: 'Parisienne', cursive;
+}
+.font_5{
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+.font_6{
+    font-family: 'Comfortaa', cursive;
+}
+.font_7{
+    font-family: 'Droid Serif', serif;
+}
+.font_8{
+    font-family: 'PT Sans', sans-serif;
+}
+.font_9{
+    margin: 18px 0px 5px 0px;
+    text-align: center;
+}
+.color_font_1 {
+    color: #8E8E8E;
+}
+.color_font_2 {
+    /*color: #757575;*/
+    color: #00649E;
+}
+.color_font_3{
+    color: #26CCFF;
+}
+/*icones */
+.color_1{
+    color: #0085FF;
+}
+.color_2{
+    color: #20C756;
+}
+
+
+.icoGoogle_bnt i{display: block;}
+
+a.actved_2.ui-link.ui-btn{
+    color: #26CCFF;
+}
+.actived.ui-icon-user:after, .actived.ui-icon-heart:after, .actived.ui-icon-home:after{
+    background-color: #26CCFF !important;
+}
+.list_icons_1 i {
+    margin: 0px 8px 0px 0px;
+    color: #00AADE;
+}
+.list_icons_1 li {
+    padding-left: 5px !important;
+}
+/*
+body{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}*/
+
+
+/*logo*/
+#logoBox{
+    text-align: center;
+    color: #88DEF9;
+}
+#logoBox i {
+    font-size: 9pc;
+}
+#logoFont{
+    font-family: 'Comfortaa', cursive;
+    color: #88DEF9;
+    font-size: x-large;
+    margin: 0;
+    padding: 5px;
+}
+/*header*/
+div#header {
+    background: white;
+    text-shadow: none;
+    border-top-color: white;
+}
+div#header .ui-navbar ul {
+    border-top: 1px solid #F1F1F1;
+}
+#logoFont>span{
+    color: #26CCFF;
+}
+#logoBox>span{
+    font-size: 24px;
+    font-family: 'Niconne', cursive;
+    /*color: #26CCFF;*/
+    color: #ABABAB;
+}
+#logoFont2{
+    margin: 0px auto !important;
+    font-family: 'Comfortaa', cursive;
+    color: #88DEF9;
+    font-size: x-large;
+    padding: 6px;
+}#logoFont2>span{
+    color: #00C3FF;
+}
+#logoFont1{
+    margin: 0px;
+    font-family: 'Comfortaa', cursive;
+    color: #61D9FF;
+    font-size: inherit;
+    font-weight: 800;
+}#logoFont1>span{
+    color: #00B2E8;
+}
+.logoBar {
+    width: 199px;
+    margin: 0 auto;
+}
+i#logoBarIcon {
+    color: #88DEF9;
+}
+
+.footer{
+    text-align: center;
+    /*background: white;*/
+    /*color: #26CCFF;*/
+    /*border: none;*/
+}
+.footer i {
+    font-size: 13px;
+    margin-right: 5px;
+}
+div#displayIndex {
+    text-align: center;
+    margin-top: 30px;
+}
+/*social*/
+.social a img {
+    width: 41px !important;
+}
+.social h4 {
+    color: #C5CACE;
+    font-family: 'Comfortaa', cursive !important;
+}
+ul {
+    margin: 0px !important;
+    padding: 0;
+}
+
+.center{text-align: center;}
+
+/* ============ HOME =================== */
+div#userCart {
+    text-align: center;
+}
+
+div#userCart img {
+    width: 31%;
+    border-radius: 50%;
+    margin-top: 17px;
+    border: 7px solid #FFFFFF;
+}
+/*============================== animais =============================*/
+a#btNav {
+    border: none;
+    margin: 2px;
+    padding: 0px;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+a#btNav i {
+    float: left;
+    margin: 4px;
+    color: #20C6F9;
+}

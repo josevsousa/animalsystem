@@ -93,26 +93,26 @@
                     </a>
                 </li>
                 <li class="{{ = ['','active'][request.controller == 'agenda'] }}" >
-                    <a href="../agenda/index.html">
+                    <a href="../agenda">
                         <i class="ti-calendar"></i>
                         <p>Agenda</p>
                     </a>
                 </li>
                 <li class="{{ = ['','active'][request.controller == 'favoritosPet'] }}" >
-                    <a href="../favoritosPet/index.html">
+                    <a href="../favoritosPet">
                         <i class="ti-star"></i>
                         <p>Favoritos Pet</p>
                     </a>
                 </li>
 						</li>
 						<li class="{{ = ['','active'][request.controller == 'indicar'] }}" >
-								<a href="../indicar/index.html">
+								<a href="../indicar">
 										<i class="ti-gift"></i>
 										<p>Indique a um amigo</p>
 								</a>
 						</li>
 						<li class="{{ = ['','active'][request.controller == 'ong'] }}" >
-								<a href="../ong/index.html">
+								<a href="../ong">
 										<i class="ti-heart"></i>
 										<p>Divulgue sua ong</p>
 								</a>
@@ -167,8 +167,10 @@
 							<span class="icon-bar bar2"></span>
 							<span class="icon-bar bar3"></span>
 						</button>
-						<a class="navbar-brand" href="#">
-							<i id="petIconBar" class="material-icons">pets</i> {{=(request.controller).lower().capitalize()}}</a>
+						<div class="navbar-brand" >
+							<i id="petIconBar" class="material-icons">pets</i> 
+           <a href="{{=URL('pets','%s')%request.controller}}">{{=(request.controller).lower().capitalize()}}</a>  {{ =["","/ %s"%request.function][request.function != 'index']}}
+                        </div>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">

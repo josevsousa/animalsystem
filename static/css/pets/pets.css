@@ -1,7 +1,16 @@
 div#cardPets {
     text-align: right;
     height: 110px;
+    float: left;
+    width: 100%;
     background: url('../../images/blog-1.jpg');
+
+
+}
+.vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); /* Adicionar os prefixos dos navegadores */
 }
 
 div#cardPets .content h3{
@@ -18,4 +27,11 @@ div#cardPets .content h3{
     width: 100%;
     border-radius: 0 0 6px 6px;
     bottom: 0 !important;
+}
+
+span.aniversario {
+    float: left;    
+    font-size: 13px;
+    padding: 2px;
+    color: #715939;
 }

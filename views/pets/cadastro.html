@@ -1,0 +1,30 @@
+{{extend 'layout_A.html'}}
+
+{{block head}}
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/cadastro.css')}}">
+{{end}}
+
+<div class="card">
+    <div class="header">
+        <h4 class="title">Edit Profile</h4>
+    </div>
+    <div class="content">
+    	{{=form}}
+       <!--  <form>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Company</label>
+                        <input type="text" class="form-control border-input"  placeholder="Company" value="Creative Code Inc.">
+                    </div>
+                </div>
+                
+            </div>
+    
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
+            </div>
+            <div class="clearfix"></div>
+        </form> -->
+    </div>
+</div>

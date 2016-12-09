@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from smarthumb import SMARTHUMB
+
 
 from uuid import uuid1 #codigo aleatorio
 from datetime import datetime, timedelta #data
@@ -36,12 +38,15 @@ def MARCADAGUA():
 #     <span>+ Proteção a seu animalzinho</span>
 # </div>
 
+
 SEXO = [
     'Macho',
     'Macho cadastrado',
     'Fêmea',
     'Fêmea cadastrada'
 ]
+
+
 RACAS = {
     'Cão':[
         'Sem raça',
@@ -175,3 +180,39 @@ RACAS = {
         'Van turco'
     ]
 }
+
+
+# valida pets
+db.pets.name.requires = IS_NOT_EMPTY( error_message='nome obrigatório')
+db.pets.sexo.requires = IS_IN_SET(SEXO)
+db.pets.thumbnail.compute = lambda row: SMARTHUMB(row.picture, (200, 200))
+# db.pets.sexo.widget = SQLFORM.widgets.radio.widget
+
+
+
+# chamada comum
+def get_miniatura(row):
+     if row.thumbnail: #se usar virtual field tem que ser "row.product.thumbnail"
+          return IMG( _src=URL('home', 'download', args=[row.thumbnail]))
+     else:
+          return IMG(_width=50, _heigth=50,_src=URL('static','images/mini.png'))
+
+# chamada de uma virtual field products
+def get_miniatura_sqlformgrid_products(row):
+     if row.product.thumbnail: #se usar virtual field tem que ser "row.product.thumbnail"
+          return IMG(_width=50, _heigth=50, _src=URL('home', 'download', args=[row.product.thumbnail]))
+     else:
+          return IMG(_width=50, _heigth=50,_src=URL('static','images/mini.png'))
+
+# chamada de uma virtual field registration
+def get_miniatura_sqlformgrid_registration(row):
+     if row.registration.thumbnail: #se usar virtual field tem que ser "row.registration.thumbnail"
+          return IMG(_width=50, _heigth=50, _src=URL('home', 'download', args=[row.registration.thumbnail]))
+     else:
+          return IMG(_width=50, _heigth=50,_src=URL('static','images/mini.png'))
+
+#esconde campos da tabela passada por parametro
+def hide_fields(tablename, fields):
+    for field in fields:
+        db[tablename][field].writable = \
+            db[tablename][field].readable = False
