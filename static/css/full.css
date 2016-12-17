@@ -12,6 +12,10 @@
   cursor: pointer;
   z-index: 1000;
 }
+h4.title {
+    color: #6d6d6d !important;
+}
+
 
 /*logo*/
 #logoBox{

@@ -5,23 +5,41 @@
 <link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/pets.css')}}">
 {{end}}
 
-
-{{#=marcaDagua}}
-
 <div class="row">
-  <div class="col-md-12">
-    {{if PETS:}}
-      {{for pet in PETS:}}
-        {{=pet}}
-      {{pass}}
-    {{else:}}
-      {{=marcaDagua}}
-    {{pass}}
-  </div>
+	{{	if PETS:
+		for pet in PETS:}}
+			<div class="col-lg-4 col-sm-6 pet_cart">
+				<div class="card">
+				    <div class="content">
+				        <div class="row">
+				            <div class="col-xs-5">
+								<img class="thumbnail_pet" src="{{= [URL('static','images/no-photo.png'),URL('home','download',args=[pet.thumbnail])][pet.thumbnail != None]}}" alt="">
+				            </div>
+				            <div class="col-xs-7">
+				                <div class="numbers">
+				                    <p>pet</p>
+				                    {{=pet.name}}
+				                </div>
+				            </div>
+				        </div>
+				        <div class="footer">
+				            <hr>
+				            <div class="stats">
+				                <i class="ti-gift"></i> {{=pet.data_nascimento}}
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+	{{
+		pass
+		else:
+			=marcaDagua
+		pass
+	}}
 </div>
-
-
-
 
 <a href="cadastro"> <span id="addPet" class="ti-plus"></span></a>
 <!-- <button id="addPet" type="button" name="button"><i class="material-icons">add</i></button> -->
+
+<!-- <img src="{{#= [URL('static','images/no-photo.png'),URL('home','download',args=[pet.thumbnail])][pet.thumbnail != None]}}" alt=""> -->

@@ -1,4 +1,4 @@
-
+    
 @auth.requires_login()
 # @auth.requires_membership('admin')
 def index():
@@ -8,6 +8,7 @@ def index():
 
 def tic():
     return 'jose vicente'
+    
 
 @cache.action()
 def download():

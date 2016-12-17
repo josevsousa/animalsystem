@@ -6,11 +6,11 @@
 .header {
     color: #cecece;
 }
+
 input[type=text], input[type=password], input[type=email] {
     background-color: white !important;
     border-bottom: 1px solid #cecece !important;
-}
-
+} 
 .checkbox input{display: block !important;}
 
 

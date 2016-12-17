@@ -1,0 +1,40 @@
+/* nome id do div do seu input file do formulario */
+/*#pets_picture__row>label {
+	display: none;
+}
+#pets_picture__row>div{
+	    background: antiquewhite;
+    width: 300px;
+    margin: 0 auto !important;
+}
+#pets_picture__row>div>input{
+    width: 64px;
+    position: relative;
+    height: 64px;
+    background: antiquewhite;
+    }
+
+#submit_record__row{
+	text-align: center;
+}*/
+
+div#bt_preview_img {
+		position: relative;
+    	width: 65px;
+    	height: 65px;
+    	margin: 0 auto;
+	}#bt_preview_img input#pets_picture {
+	    position: relative;
+	    width: 64px;
+	    height: 64px;
+	    z-index: 4;
+	    opacity: 0.0;
+    	cursor: pointer;
+		}
+	#bt_preview_img img{
+		position: relative;
+    	margin-top: -87px;
+		}	
+.form-group {
+    color: #9A9A9A;
+}		

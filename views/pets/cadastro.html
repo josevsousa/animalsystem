@@ -1,15 +1,79 @@
 {{extend 'layout_A.html'}}
 
 {{block head}}
-	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/cadastro.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/cadastro.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/btUpload.css')}}">
+    <script src="{{=URL('static','js/pets/cadastro.js')}}"></script>
 {{end}}
 
 <div class="card">
     <div class="header">
-        <h4 class="title">Edit Profile</h4>
+        <h4 class="title">ADD PET</h4>
     </div>
     <div class="content">
-    	{{=form}}
+
+        {{=form.custom.begin}}    
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                        {{=form.custom.label.name}}
+                        {{=form.custom.widget.name}}         
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                        {{=form.custom.label.data_nascimento}}
+                        {{=form.custom.widget.data_nascimento}}  
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                        {{=form.custom.label.sexo}}
+                        {{=form.custom.widget.sexo}}  
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                        {{=form.custom.label.especie}}
+                        {{=form.custom.widget.especie}}  
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                        {{=form.custom.label.raca}}
+                        {{=form.custom.widget.raca}}  
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div id="bt_preview_img">
+                        {{=form.custom.widget.picture}}  
+                        <img src="{{=URL('static','images/camera.png')}}" alt="">
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group center">
+                    {{=form.custom.submit}}
+                </div>
+            </div>    
+        </div>
+        {{=form.custom.end}}
+
+
        <!--  <form>
             <div class="row">
                 <div class="col-md-12">
