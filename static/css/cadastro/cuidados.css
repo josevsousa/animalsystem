@@ -1,0 +1,9 @@
+img.thumbnail_pet {
+    border-radius: 14px;
+    margin-left: 7px;
+    border: 4px solid #efefef;
+    max-height: 110px;
+}
+#editPet{
+	display: none;
+}

@@ -6,22 +6,22 @@
     <script src="{{=URL('static','js/pets/cadastro.js')}}"></script>
 {{end}}
 
+<input type="text" name="transitory" id="transitory" style="display:none">
 <div class="card">
     <div class="header">
-        <h4 class="title">ADD PET</h4>
+        <h4 class="title">CADASTRE UM ANIMAL</h4>
     </div>
     <div class="content">
 
-        {{=form.custom.begin}}    
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                        {{=form.custom.label.name}}
-                        {{=form.custom.widget.name}}         
+        {{=form.custom.begin}}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                            {{=form.custom.label.name}}
+                            {{=form.custom.widget.name}}         
+                    </div>
                 </div>
             </div>
-
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">

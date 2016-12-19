@@ -46,6 +46,17 @@ SEXO = [
     'Fêmea cadastrada'
 ]
 
+ESPECIES = [
+    'Cão',
+    'Gato',
+    'Ave',
+    'Peixe',
+    'Tartaruga',
+    'Furão',
+    'Chinchila',
+    'Réptil',
+    'Outro'
+]
 
 RACAS = {
     'Cão':[
@@ -132,6 +143,7 @@ RACAS = {
         'Yorkshire Terrier'
     ],
     'Gato':[
+        'Sem Raça',
         'Abissínio',
         'Angorá turco',
         'American curl',
@@ -186,9 +198,12 @@ RACAS = {
 db.pets.name.requires = IS_NOT_EMPTY( error_message='nome obrigatório')
 db.pets.sexo.requires = IS_IN_SET(SEXO)
 db.pets.thumbnail.compute = lambda row: SMARTHUMB(row.picture, (200, 200))
+# db.pets.raca_cats.requires = IS_IN_SET(RACAS['Gato'])
+# db.pets.raca_dogs.requires = IS_IN_SET(RACAS['Cão'])
+db.pets.especie.requires = IS_IN_SET(ESPECIES)
+# db.pets.cliente.compute = lambda row: session.auth.user.id 
+
 # db.pets.sexo.widget = SQLFORM.widgets.radio.widget
-
-
 
 # chamada comum
 def get_miniatura(row):

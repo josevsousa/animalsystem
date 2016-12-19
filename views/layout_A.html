@@ -92,7 +92,7 @@
                         <p>Pets</p>
                     </a>
                 </li>
-                <li class="{{ = ['','active'][request.controller == 'agenda'] }}" >
+               <!--  <li class="{{ = ['','active'][request.controller == 'agenda'] }}" >
                     <a href="../agenda">
                         <i class="ti-calendar"></i>
                         <p>Agenda</p>
@@ -104,19 +104,18 @@
                         <p>Favoritos Pet</p>
                     </a>
                 </li>
-						</li>
-						<li class="{{ = ['','active'][request.controller == 'indicar'] }}" >
-								<a href="../indicar">
-										<i class="ti-gift"></i>
-										<p>Indique a um amigo</p>
-								</a>
-						</li>
-						<li class="{{ = ['','active'][request.controller == 'ong'] }}" >
-								<a href="../ong">
-										<i class="ti-heart"></i>
-										<p>Divulgue sua ong</p>
-								</a>
-						</li>
+				<li class="{{ = ['','active'][request.controller == 'indicar'] }}" >
+						<a href="../indicar">
+								<i class="ti-gift"></i>
+								<p>Indique a um amigo</p>
+						</a>
+				</li>
+				<li class="{{ = ['','active'][request.controller == 'ong'] }}" >
+						<a href="../ong">
+								<i class="ti-heart"></i>
+								<p>Divulgue sua ong</p>
+						</a>
+				</li> -->
                 <!--<li>
                     <a href="table.html">
                         <i class="ti-view-list-alt"></i>
@@ -147,13 +146,13 @@
                         <p>Notifications</p>
                     </a>
                 </li> -->
-				<li class="active-pro">
+<!-- 				<li class="active-pro">
                     <a href="upgrade.html">
                         <i class="ti-export"></i>
                         <p>Upgrade to PRO</p>
                     </a>
                 </li>
-            </ul>
+ -->            </ul>
     	</div>
     </div>
 
@@ -169,7 +168,7 @@
 						</button>
 						<div class="navbar-brand" >
 							<i id="petIconBar" class="material-icons">pets</i> 
-           <a href="{{=URL('pets','%s')%request.controller}}">{{=(request.controller).lower().capitalize()}}</a>  {{ =["","/ %s"%request.function][request.function != 'index']}}
+                            <a href="{{=URL('pets','%s')%request.controller}}">{{=(request.controller).lower().capitalize()}}</a>  {{ =["","/ %s"%request.function][request.function != 'index']}}
                         </div>
 					</div>
 					<div class="collapse navbar-collapse">
@@ -200,7 +199,7 @@
 							{{pass}}
 
 
-							<li class="dropdown">
+							<!-- <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="ti-bell"></i>
 									<p class="notification">5</p>
@@ -214,14 +213,14 @@
 									<li><a href="#">Notification 4</a></li>
 									<li><a href="#">Another notification</a></li>
 								</ul>
-							</li>
+							</li> -->
 						</ul>
 
 					</div>
 				</div>
 			</nav>
 
-
+        <input type="text" name="transitory" id="transitory" style='display:none'>
         <div class="content">
             <div class="container-fluid">
                   {{include}}

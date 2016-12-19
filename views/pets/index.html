@@ -3,11 +3,13 @@
 {{block head}}
 <!-- <link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/themes.css')}}"> -->
 <link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/pets.css')}}">
+<script src="{{=URL('static','js/cadastro/cadastro.js')}}"></script>
 {{end}}
-
 <div class="row">
 	{{	if PETS:
 		for pet in PETS:}}
+			   
+        <a href="cuidados/{{=pet.id}}">
 			<div class="col-lg-4 col-sm-6 pet_cart">
 				<div class="card">
 				    <div class="content">
@@ -17,20 +19,23 @@
 				            </div>
 				            <div class="col-xs-7">
 				                <div class="numbers">
-				                    <p>pet</p>
-				                    {{=pet.name}}
+				                    <p>{{=pet.especie}}</p>
+				                    {{	name =	(pet.name).split(' ')[0]	
+				                    	=name}}
 				                </div>
 				            </div>
 				        </div>
 				        <div class="footer">
 				            <hr>
 				            <div class="stats">
-				                <i class="ti-gift"></i> {{=pet.data_nascimento}}
+				                <i class="ti-gift"></i> {{=pet.data_nascimento.strftime('%d / %m / %Y')}}
+				            	
 				            </div>
 				        </div>
 				    </div>
 				</div>
 			</div>
+		</a>	
 	{{
 		pass
 		else:

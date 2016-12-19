@@ -1,4 +1,5 @@
 
+
 // antes do DOM
 function init(){
 
@@ -7,8 +8,50 @@ function init(){
 
 // depois do DOM
 window.onload = function(){
-	preview_picture(); // preview na view
+	// preview_picture(); // preview na view
 	// addImgNoInputFile();
+
+	// especie();
+}
+
+function especie(){
+	//campo de Raca
+	var pets_raca = document.getElementById('pets_raca'); 
+	pets_raca.parentElement.style.display = 'none'; //esconde
+
+	//raca temp
+	var select = 'Raça'+
+		'<select class=" transitory_especie form-control border-input" id="pets_sexo" name="sexo">'+
+		'<option>dddd</option>'+
+		'<option>ddwwwdd</option>'+
+		'</select>';
+
+	//input temp 
+	var input = 'Raça<input class="transitory_especie  form-control border-input" name="transit" type="text" value="">'	
+	//add input temp ao raca
+	// $('.row')[4].children[0].children[0].innerHTML = input	
+
+
+	// inputs
+	var pets_especie = document.getElementById('pets_especie');
+	var transitory = document.getElementById('transitory');
+
+	pets_especie.addEventListener('change', function(){
+		valor = this.value;
+		transitory.value = valor
+		if (valor == 'Gato') {
+			// monta o select do Gato
+			$('.row')[4].children[0].children[0].innerHTML = select	
+		}else if(valor == 'Cão') {
+			// monta o select do Cao
+			$('.row')[4].children[0].children[0].innerHTML = select	
+		}else{
+			// monta o input
+			$('.row')[4].children[0].children[0].innerHTML = input	
+		}
+
+		// ajax('campo_especie', ['transitory'])
+	});
 
 }
 

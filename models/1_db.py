@@ -101,10 +101,8 @@ plugins = PluginManager()
 # -------------------------------------------------------------------------
 
 # depois do login
-auth.settings.login_next = URL("pets","index")
-
+auth.settings.login_next = URL("../pets","index")
 auth.define_tables(username=False, signature=False)
-
 
 # -------------------------------------------------------------------------
 # configure email
@@ -145,16 +143,15 @@ auth.settings.reset_password_requires_verification = True
 # -------------------------------------------------------------------------
 # auth.enable_record_versioning(db)
 
-
-
 # Registration
 db.define_table('pets',
     Field('name','string', label='Nome'),
     Field('data_nascimento', 'datetime'),
-	Field("sexo","string", label='Sexo'),
+    Field('sexo','string', label='Sexo'),
     Field('especie', label='Espécie'),
-    Field('raca', label='Raça'),
+    Field('raca', 'string', label='Raça'),
     Field('picture','upload'),
-	Field('thumbnail','upload'),
-	format = '%(name)s'
+    Field('thumbnail','upload'),
+    auth.signature,
+    format = '%(name)s'
     )

@@ -1,0 +1,195 @@
+{{extend 'layout_A.html'}}
+
+{{block head}}
+<link rel="stylesheet" type="text/css" href="{{=URL('static','css/cadastro/cuidados.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/cadastro.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{=URL('static','css/pets/btUpload.css')}}">
+<script src="{{=URL('static','js/pets/cuidados.js')}}"></script>
+
+{{end}}
+
+<div class="row">
+	<div class="col-lg-12 col-sm-12 pet_cart">
+		<div class="card">
+		    <div class="content">
+		        <div class="row">
+		            <div class="col-xs-5">
+						<img src="{{=avatar}}" alt="" class="thumbnail_pet">
+		            </div>
+		            <div class="col-xs-7">
+		                <div class="numbers">
+		                    <p><a href="#" id="bt_editPet"><i class="ti-pencil-alt"></i> Editar</a></p>
+		                    {{=name}}
+		                </div>
+		            </div>
+		        </div>
+		        <div id="editPet" >
+					{{=form.custom.begin}}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								{{=form.custom.label.name}}
+								{{=form.custom.widget.name}}         
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								{{=form.custom.label.data_nascimento}}
+								{{=form.custom.widget.data_nascimento}}  
+							</div>
+						</div>    
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								{{=form.custom.label.sexo}}
+								{{=form.custom.widget.sexo}}  
+							</div>
+						</div>    
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								{{=form.custom.label.especie}}
+								{{=form.custom.widget.especie}}  
+							</div>
+						</div>    
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								{{=form.custom.label.raca}}
+								{{=form.custom.widget.raca}}  
+							</div>
+						</div>    
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<div id="bt_preview_img">
+									{{=form.custom.widget.picture}}  
+									<img src="{{=URL('static','images/camera.png')}}" alt="">
+								</div>
+							</div>
+						</div>    
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group center">
+								{{=form.custom.submit}}
+							</div>
+						</div>    
+					</div>
+{{=form.custom.end}}
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>	
+
+<div id="artigo">
+	<div class="row">
+	    <div class="col-lg-3 col-sm-6">
+	        <div class="card">
+	            <div class="content">
+	                <div class="row">
+	                    <div class="col-xs-5">
+	                        <div class="icon-big icon-warning text-center">
+	                            <i class="ti-server"></i>
+	                        </div>
+	                    </div>
+	                    <div class="col-xs-7">
+	                        <div class="numbers">
+	                            <p>Cart Vacinação</p>
+	                            0
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="footer">
+	                    <hr>
+	                    <div class="stats">
+	                        <i class="ti-calendar"></i> 02/02/2020
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-lg-3 col-sm-6">
+	        <div class="card">
+	            <div class="content">
+	                <div class="row">
+	                    <div class="col-xs-5">
+	                        <div class="icon-big icon-success text-center">
+	                            <i class="ti-wallet"></i>
+	                        </div>
+	                    </div>
+	                    <div class="col-xs-7">
+	                        <div class="numbers">
+	                            <p>Medicamentos </p>
+	                            0
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="footer">
+	                    <hr>
+	                    <div class="stats">
+	                        <i class="ti-calendar"></i> 02/02/2020
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-lg-3 col-sm-6">
+	        <div class="card">
+	            <div class="content">
+	                <div class="row">
+	                    <div class="col-xs-5">
+	                        <div class="icon-big icon-danger text-center">
+	                            <i class="ti-pulse"></i>
+	                        </div>
+	                    </div>
+	                    <div class="col-xs-7">
+	                        <div class="numbers">
+	                            <p>Banho e tosa</p>
+	                            0
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="footer">
+	                    <hr>
+	                    <div class="stats">
+	                        <i class="ti-calendar"></i> 02/02/2020
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="col-lg-3 col-sm-6">
+	        <div class="card">
+	            <div class="content">
+	                <div class="row">
+	                    <div class="col-xs-5">
+	                        <div class="icon-big icon-info text-center">
+	                            <i class="ti-twitter-alt"></i>
+	                        </div>
+	                    </div>
+	                    <div class="col-xs-7">
+	                        <div class="numbers">
+	                            <p>Medicações</p>
+	                            0
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="footer">
+	                    <hr>
+	                    <div class="stats">
+	                        <i class="ti-calendar"></i> 02/02/2020
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div><!--fim do artigo-->	
